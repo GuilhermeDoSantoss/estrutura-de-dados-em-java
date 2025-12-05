@@ -79,6 +79,21 @@ public class Vetor {
         return this.elementos[posicao];
     }
 
+    public int busca(String elemento){
+        // Itera sobre o array até o índice correspondente ao tamanho atual da lista
+        for (int i = 0; i < this.tamanho; i++) {
+
+            // Valida se o elemento atual é igual ao elemento buscado
+            if (this.elementos[i].equals(elemento)) {
+
+                // Retorna o índice onde o elemento foi encontrado
+                return i;
+            }
+        }
+        // Caso o loop finalize sem encontrar o elemento, retorna -1 como indicador de "não encontrado"
+        return -1;
+    }
+
     public int tamanho(){
         return this.tamanho;
     }
@@ -106,7 +121,6 @@ public class Vetor {
 
         //Fecha a estrutura da lista: ].
         s.append("]");
-
 
         return s.toString();
     }
