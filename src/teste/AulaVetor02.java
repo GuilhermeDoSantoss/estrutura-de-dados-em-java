@@ -2,7 +2,7 @@ package teste;
 
 import estruturadedados.Vetor;
 
-public class Aula02 {
+public class AulaVetor02 {
     public static void main(String[] args) {
 
 
