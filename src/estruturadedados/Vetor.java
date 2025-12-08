@@ -69,6 +69,32 @@ public class Vetor {
         return false;
     }
 
+    // 0 1 2 3 4 5 6 = tamanho é 5
+    // B C E F G + +
+    public boolean adiciona(int posicao, String elemento){
+
+        if (!(posicao >= 0 && posicao < tamanho)) {
+            // Valida se a posição está dentro do range permitido.
+            // Caso contrário, dispara exceção para evitar inconsistências no array.
+            throw new IllegalArgumentException("Posição inválida");
+        }
+
+        // Move todos os elementos uma posição à frente,
+        // abrindo espaço no índice desejado para inserir o novo elemento.
+        for (int i = this.tamanho - 1; i >= posicao; i--) {
+            this.elementos[i + 1] = this.elementos[i];
+        }
+
+        // Insere o novo elemento exatamente na posição solicitada.
+        this.elementos[posicao] = elemento;
+
+        // Incrementa o tamanho lógico da lista, já que um novo item foi adicionado.
+        this.tamanho++;
+
+        // Retorno padrão indicando operação finalizada com sucesso.
+        return true;
+    }
+
     public String busca(int posicao) {
         // Valida se a posição está dentro do range permitido (>=0 e < tamanho)
         if (!(posicao >= 0 && posicao < tamanho)) {
