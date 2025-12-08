@@ -53,6 +53,8 @@ public class Vetor {
 
     public boolean adiciona(String elemento) {
 
+        this.aumentaCapacidade();
+
         // Verifica se ainda há capacidade no array interno
         if (this.tamanho < this.elementos.length) {
 
@@ -79,6 +81,8 @@ public class Vetor {
             throw new IllegalArgumentException("Posição inválida");
         }
 
+        this.aumentaCapacidade();
+
         // Move todos os elementos uma posição à frente,
         // abrindo espaço no índice desejado para inserir o novo elemento.
         for (int i = this.tamanho - 1; i >= posicao; i--) {
@@ -93,6 +97,23 @@ public class Vetor {
 
         // Retorno padrão indicando operação finalizada com sucesso.
         return true;
+    }
+
+    private void aumentaCapacidade() {
+        // Verifica se o array está 100% ocupado (sem slots livres)
+        if (this.tamanho == this.elementos.length) {
+
+            // Cria um novo array com o dobro da capacidade atual
+            String[] elementosNovos = new String[this.elementos.length * 2];
+
+            // Copia os elementos existentes para o novo array ampliado
+            for (int i = 0; i < this.elementos.length; i++) {
+                elementosNovos[i] = this.elementos[i];
+            }
+
+            // Substitui o array antigo pelo novo, agora com mais capacidade
+            this.elementos = elementosNovos;
+        }
     }
 
     public String busca(int posicao) {

@@ -1,4 +1,4 @@
-package teste;
+package teste.vetor;
 
 import estruturadedados.Vetor;
 

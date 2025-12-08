@@ -1,19 +1,15 @@
-package teste;
+package teste.vetor;
 
 import estruturadedados.Vetor;
 
-public class AulaVetor04 {
+public class AulaVetor03 {
 
     public static void main(String[] args) {
 
-        Vetor vetor = new Vetor(10);
+        Vetor vetor = new Vetor(2);
 
         vetor.adiciona("elemento 1");
         vetor.adiciona("elemento 2");
         vetor.adiciona("elemento 3");
-
-        System.out.println(vetor.tamanho());
-
-        System.out.println(vetor.toString());
     }
 }
