@@ -141,6 +141,26 @@ public class Vetor {
         return -1;
     }
 
+    // B D E F F -> posição a ser removida é 1 (G)
+    // 0 1 2 3 4 -> tamanho do vetor é 5
+    // vetor[1] = vetor[2]
+    // vetor[2] = vetor[3]
+    // vetor[3] = vetor[4]
+    public void remove(int posicao){
+        // Valida se a posição está dentro do range permitido (>=0 e < tamanho)
+        if (!(posicao >= 0 && posicao < tamanho)) {
+            // Lança exceção quando a posição é inválida
+            throw new IllegalArgumentException("Posição inválida");
+        }
+        for (int i = posicao; i < this.tamanho-1; i++){
+            this.elementos[i] = this.elementos[i+1];
+            // Realoca os elementos à direita, deslocando tudo uma posição para a esquerda
+            // Isso elimina o "buraco" deixado pelo elemento removido
+        }
+        this.tamanho--;
+        // Decrementa o tamanho lógico do array, ajustando o índice final válido
+    }
+
     public int tamanho(){
         return this.tamanho;
     }
