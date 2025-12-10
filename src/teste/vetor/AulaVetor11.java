@@ -1,7 +1,6 @@
 package teste.vetor;
 
-import estruturadedados.Lista;
-import estruturadedados.VetorObjetos;
+import estruturadedados.vetor.Lista;
 
 public class AulaVetor11{
     public static void main(String[] args) {

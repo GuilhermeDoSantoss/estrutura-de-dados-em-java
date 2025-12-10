@@ -1,6 +1,4 @@
-package estruturadedados;
-
-import java.util.Arrays;
+package estruturadedados.vetor;
 
 public class Vetor {
 

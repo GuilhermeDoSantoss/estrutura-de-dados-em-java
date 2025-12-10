@@ -1,6 +1,4 @@
-package estruturadedados;
-
-import java.lang.reflect.Array;
+package estruturadedados.vetor;
 
 public class Lista<T> {
 

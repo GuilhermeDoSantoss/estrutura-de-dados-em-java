@@ -1,6 +1,6 @@
 package teste.vetor;
 
-import estruturadedados.VetorObjetos;
+import estruturadedados.vetor.VetorObjetos;
 
 public class AulaVetor10 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package estruturadedados;
+package estruturadedados.vetor;
 
 public class VetorObjetos {
 
