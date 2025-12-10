@@ -106,6 +106,23 @@ public class Lista<T> {
         // Retorna -1 indicando que não foi encontrado
     }
 
+    public int ultimoIndice(T elemento){
+
+        for (int i = this.tamanho - 1; i >= 0; i--) {
+            // Iteração em ordem decrescente, começando do último índice válido da lista
+
+            if (this.elementos[i].equals(elemento)) {
+                // Valida se o elemento da posição atual é igual ao elemento buscado.
+                // Caso positivo, retorna imediatamente o índice encontrado.
+
+                return i;
+            }
+        }
+
+        // Caso nenhum match seja identificado no loop, retorna -1 para sinalizar "não encontrado".
+        return -1;
+    }
+
     public boolean contem(T elemento){
         return busca(elemento) > -1;
         // Executa a busca pelo elemento; se o índice retornado for maior que -1,
