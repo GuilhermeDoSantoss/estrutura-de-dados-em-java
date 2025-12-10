@@ -106,6 +106,12 @@ public class Lista<T> {
         // Retorna -1 indicando que não foi encontrado
     }
 
+    public boolean contem(T elemento){
+        return busca(elemento) > -1;
+        // Executa a busca pelo elemento; se o índice retornado for maior que -1,
+        // significa que o item foi encontrado na estrutura, logo retorna true.
+    }
+
     public void remove(int posicao){
 
         if (!(posicao >= 0 && posicao < tamanho)) {
