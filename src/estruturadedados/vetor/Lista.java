@@ -145,6 +145,16 @@ public class Lista<T> {
         // Ajusta o tamanho da lista após a remoção
     }
 
+    public void remove(T elemento) {
+        int pos = this.busca(elemento);
+        // Executa lookup do elemento no array e captura o índice retornado.
+
+        if (pos > -1) {
+            this.remove(pos);
+            // Aciona a remoção física pelo índice quando o elemento é encontrado.
+        }
+    }
+
     public int tamanho(){
         return this.tamanho;
         // Expõe o tamanho atual da lista
