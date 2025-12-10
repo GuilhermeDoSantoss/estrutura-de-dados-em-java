@@ -80,7 +80,13 @@ public class Lista<T> {
         }
     }
 
-    public Object busca(int posicao) {
+    public T obtem(int posicao){
+        // Delegação direta: reaproveita o metodo 'busca' para recuperar o elemento pela posição,
+        // garantindo padronização de acesso e eliminando duplicação de lógica.
+        return this.busca(posicao);
+    }
+
+    public T busca(int posicao) {
 
         if (!(posicao >= 0 && posicao < tamanho)) {
             throw new IllegalArgumentException("Posição inválida");
