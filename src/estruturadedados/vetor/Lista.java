@@ -161,6 +161,23 @@ public class Lista<T> {
         }
     }
 
+    public void limpar(){
+
+        // opção 1: realoca o array, zerando todas as posições e criando uma nova estrutura vazia
+        //this.elementos = (T[]) new Object[this.elementos.length];
+
+        // opção 2: reseta o indicador de tamanho, tornando a lista logicamente vazia
+        //this.tamanho = 0;
+
+        // opção 3: limpa posição a posição, garantindo que nenhum garbage residual permaneça alocado
+        for (int i = 0; i < this.tamanho; i++){
+            this.elementos[i] = null;
+        }
+
+        // finaliza o processo garantindo que o estado lógico fique consistente
+        this.tamanho = 0;
+    }
+
     public int tamanho(){
         return this.tamanho;
         // Expõe o tamanho atual da lista
