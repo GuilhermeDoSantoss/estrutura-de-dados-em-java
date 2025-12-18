@@ -14,12 +14,16 @@ public class Ex06 {
         //2. insira 30 contatos no vetor (isso e possivel ser feito atraves de um loop)
         //crie um exemplo para utilizar cada metodo da classe Lista
 
+        //criação das variáveis
         Scanner scan = new Scanner(System.in);
 
+        // criar vetor com 20 de capacidade
         Lista<Contato> lista = new Lista<Contato>(20);
 
+        //criar e adicionar x contatos
         criarContatosDinamicamente(30, lista);
 
+        //criar um menu pro usurario escolha uma opcao
         int opcao = 1;
 
         while (opcao !=0){
@@ -234,7 +238,7 @@ public class Ex06 {
         }
     }
 
-    private static String leInformacao(String msg, Scanner scan){
+    protected static String leInformacao(String msg, Scanner scan){
 
         System.out.println(msg);
         String entrada = scan.nextLine();
@@ -242,7 +246,7 @@ public class Ex06 {
         return entrada;
     }
 
-    private static int leInformacaoInt(String msg, Scanner scan){
+    protected static int leInformacaoInt(String msg, Scanner scan){
 
         boolean entradaValida = false;
         int num = 0;
@@ -268,7 +272,7 @@ public class Ex06 {
     }
 
 
-        private static int obterOpacaoMenu(Scanner scan){
+        protected static int obterOpacaoMenu(Scanner scan){
 
             boolean entradaValida = false;
             int opcao = 0;
@@ -309,7 +313,7 @@ public class Ex06 {
             return opcao;
         }
 
-        private static void criarContatosDinamicamente (int quantidade, Lista<Contato> lista){
+        protected static void criarContatosDinamicamente (int quantidade, Lista<Contato> lista){
 
         Contato contato;
 
