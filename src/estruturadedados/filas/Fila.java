@@ -2,7 +2,7 @@ package estruturadedados.filas;
 
 import estruturadedados.EstruturaEstatica;
 
-public class Fila extends EstruturaEstatica {
+public class Fila extends EstruturaEstatica<T> {
 
     public Fila(){
         super();
@@ -12,5 +12,7 @@ public class Fila extends EstruturaEstatica {
         super(capacidade);
     }
 
-
+    public void enfileira(T elemento){
+        this.adiciona(elemento);
+    }
 }
