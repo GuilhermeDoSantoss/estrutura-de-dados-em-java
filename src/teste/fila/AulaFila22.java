@@ -21,6 +21,5 @@ public class AulaFila22 {
 
         System.out.println(fila);
 
-
     }
 }
